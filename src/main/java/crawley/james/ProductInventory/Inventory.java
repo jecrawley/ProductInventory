@@ -5,49 +5,25 @@ package crawley.james.ProductInventory;
  */
 public class Inventory {
 
-    Product product0;
-    Product product1;
-    Product product2;
+    Product[] products;
 
-    public Inventory (Product product0, Product product1, Product product2) {
-        this.product0 = product0;
-        this.product1 = product1;
-        this.product2 = product2;
+
+    public Inventory (Product[] products) {
+        this.products = products;
     }
 
-    public double getValueOfProduct0 () {
+    public double getValueOfProducts (int index) {
 
-        return product0.getPrice() * product0.getQuantity();
+        return products[index].getPrice() * products[index].getQuantity();
 
     }
 
-    public double getValueOfProduct1 () {
 
-        return product1.getPrice() * product1.getQuantity();
+    public Product getProduct (int index) {
 
-    }
-
-    public double getValueOfProduct2 () {
-
-        return product2.getPrice() * product2.getQuantity();
+        return products[index];
 
     }
 
-    public Product getProduct0 () {
 
-        return product0;
-
-    }
-
-    public Product getProduct1 () {
-
-        return product1;
-
-    }
-
-    public Product getProduct2 () {
-
-        return product2;
-
-    }
 }
